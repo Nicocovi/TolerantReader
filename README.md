@@ -1,7 +1,5 @@
 ﻿# TolerantReader_Example
 
-Example to verify relevant Tolerant Reader Use Cases from SXXXX Servicearchitecture Guideline.
-
 "Be liberal in what you accept <br>
 be conservative in that what you send"
 
@@ -60,13 +58,13 @@ The service takes as input XXX and returns a XXX.
 
 #### Implementation
 
-Click [here](https://github.developer.allianz.io/AZDBusinessArchitecture/TolerantReader_Example/tree/master/java/Service%20Provider) to see the implementation of the Service Provider.
+Click [here]() to see the implementation of the Service Provider.
 
 ### Service Consumer
 
 #### Implementation
 
-Click [here](https://github.developer.allianz.io/AZDBusinessArchitecture/TolerantReader_Example/tree/master/java/Service%20Consumer) to see the implementation of the Service Consumer.
+Click [here]() to see the implementation of the Service Consumer.
 
 ## Administrator Manual
 
