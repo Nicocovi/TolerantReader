@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.11 generiert 
+Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren. 
+Generiert: 2017.12.11 um 01:39:21 PM CET 
+
+  -->
+  <bindings xmlns:tns="http://codenotfound.com/types/orderhistory" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="com.codenotfound.types.orderhistory"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:getOrderHistoryRequest">
+      <class ref="com.codenotfound.types.orderhistory.GetOrderHistoryRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getOrderHistoryResponse">
+      <class ref="com.codenotfound.types.orderhistory.GetOrderHistoryResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:OrderHistoryType">
+      <class ref="com.codenotfound.types.orderhistory.OrderHistoryType"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:OrderListType">
+      <class ref="com.codenotfound.types.orderhistory.OrderListType"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:OrderType">
+      <class ref="com.codenotfound.types.orderhistory.OrderType"/>
+    </bindings>
+  </bindings>
+</bindings>

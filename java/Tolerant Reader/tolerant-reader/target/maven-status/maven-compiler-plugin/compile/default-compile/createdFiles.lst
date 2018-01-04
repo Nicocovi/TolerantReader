@@ -1,0 +1,13 @@
+com\codenotfound\ws\endpoint\OrderHistoryEndpoint.class
+com\codenotfound\ws\endpoint\WebServiceConfig.class
+com\codenotfound\types\orderhistory\ObjectFactory.class
+com\codenotfound\ws\client\ClientConfig.class
+com\codenotfound\ws\SpringWsApplication.class
+com\codenotfound\types\orderhistory\OrderHistoryType.class
+com\codenotfound\types\orderhistory\package-info.class
+com\codenotfound\types\orderhistory\GetOrderHistoryRequest.class
+com\codenotfound\ws\model\Order.class
+com\codenotfound\ws\model\OrderHistory.class
+com\codenotfound\types\orderhistory\OrderListType.class
+com\codenotfound\types\orderhistory\OrderType.class
+com\codenotfound\types\orderhistory\GetOrderHistoryResponse.class

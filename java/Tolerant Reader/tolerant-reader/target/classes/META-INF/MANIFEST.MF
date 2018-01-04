@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: spring-ws-tolerant-reader
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Nicolas
+Implementation-Vendor-Id: com.codenotfound
+Build-Jdk: 1.8.0_91
+Implementation-URL: https://www.codenotfound.com/2017/07/spring-ws-soa
+ p-tolerant-reader-example.html
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

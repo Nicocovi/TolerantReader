@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.pluralsight.com/schema/Order" xmlns:tns="http://www.pluralsight.com/schema/Order"
+	elementFormDefault="qualified">
+	<!-- 
+		This is the schema for Orders. It contains two global element declarations and 
+		several types, both simple and complex.  A complex type allows you to add other 
+		elements and attributes within the type definition while a simple type has text-based 
+		content, but no child elements or attributes. As a general practice, types are suffixed 
+		with the word Type. Setting minOccurs and maxOccurs to 1 indicates the element is required 
+		once and only once in the order inquiry type. Setting minOccurs to 0 and maxOccurs to 1 
+		indicates the element is optional. Setting minOccurs and then maxOccurs to unbounded indicates 
+		n to many and will bind to a list in Java. 
+	-->
+
+	<xsd:element name="orderInquiry" type="tns:OrderInquiryType"></xsd:element>
+
+	<xsd:complexType name="OrderInquiryType">
+		<xsd:sequence>
+			<xsd:element name="uniqueOrderId" minOccurs="1"
+				maxOccurs="1" type="xsd:int"></xsd:element>
+			<xsd:element name="orderQuantity" minOccurs="1"
+				maxOccurs="1" type="xsd:int"></xsd:element>
+			<xsd:element name="accountId" minOccurs="1" maxOccurs="1"
+				type="xsd:int"></xsd:element>
+			<xsd:element name="ean13" minOccurs="1" maxOccurs="1"
+				type="xsd:long"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="AccountType">
+		<xsd:sequence>
+			<xsd:element name="accountId" minOccurs="1" maxOccurs="1"
+				type="xsd:int"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="BookType">
+		<xsd:sequence>
+			<xsd:element name="ean13" minOccurs="1" maxOccurs="1"
+				type="xsd:long"></xsd:element>
+			<xsd:element name="title" minOccurs="1" maxOccurs="1"
+				type="xsd:string"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!--  
+	The simple type created will restrict the text that can be used for this type. 
+	I used an enumeration as this provides a restricted, yet consistent list of 
+	order statuses that are available. This will map to an enumeration class in Java.
+	-->
+
+	<xsd:simpleType name="OrderStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="READY"></xsd:enumeration>
+			<xsd:enumeration value="FULFILLED"></xsd:enumeration>
+			<xsd:enumeration value="BACKORDER"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="OrderItemType">
+		<xsd:sequence>
+			<xsd:element name="lineNumber" minOccurs="1" maxOccurs="1"
+				type="xsd:int"></xsd:element>
+			<xsd:element name="expectedShippingDate" minOccurs="0"
+				maxOccurs="1" type="xsd:date"></xsd:element>
+			<xsd:element name="book" minOccurs="1" maxOccurs="1"
+				type="tns:BookType"></xsd:element>
+			<xsd:element name="price" minOccurs="1" maxOccurs="1"
+				type="xsd:decimal"></xsd:element>
+			<xsd:element name="quantityShipped" minOccurs="1"
+				maxOccurs="1" type="xsd:int"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OrderType">
+		<xsd:sequence>
+			<xsd:element name="orderItems" minOccurs="1" maxOccurs="unbounded"
+				type="tns:OrderItemType"></xsd:element>
+			<xsd:element name="orderStatus" minOccurs="1" maxOccurs="1"
+				type="tns:OrderStatusType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OrderInquiryResponseType">
+		<xsd:sequence>
+			<xsd:element name="order" minOccurs="1" maxOccurs="1"
+				type="tns:OrderType"></xsd:element>
+			<xsd:element name="account" minOccurs="1" maxOccurs="1"
+				type="tns:AccountType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="orderInquiryResponse" type="tns:OrderInquiryResponseType"></xsd:element>
+
+
+
+</xsd:schema>

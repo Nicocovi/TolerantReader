@@ -1,0 +1,10 @@
+client:
+  default-uri: http://localhost:9090/codenotfound/ws/orderhistory
+  xpath:
+    order: //*[local-name()='order']
+    order-id: .//*[local-name()='orderId']
+    order-name: .//*[local-name()='orderName']
+    order-description: .//*[local-name()='orderDescription']
+
+server:
+  port: 9090
