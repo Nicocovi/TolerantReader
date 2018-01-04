@@ -17,7 +17,6 @@ Source: [Martin Fowler](https://martinfowler.com/bliki/TolerantReader.html)
   * [Use Case](#use-case)
   * [System Design](#system-design)
   * [Administrator Manual](#administrator-manual)
-  * [Contact Details](#contact-details)
   * [Sources](#sources)
   
 ## Introduction
@@ -72,14 +71,6 @@ Click [here](https://github.developer.allianz.io/AZDBusinessArchitecture/Toleran
 ## Administrator Manual
 
 
-
-## Contact Details
-
-For more information please contact:
-
-[Martin Leichter](https://github.developer.allianz.io/martin-leichter)
-
-[Nicolas Corpancho Villasana](https://github.developer.allianz.io/nicolas-corpancho-villasana)
 
 ## Sources
 
